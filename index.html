@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoul Stories | K-Drama Storybooks</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="topbar">
+    <div class="brand">♡ SEOUL STORIES</div>
+    <nav class="top-actions" aria-label="Main navigation"><button class="btn secondary" id="homeBtn">⌂ Home</button><button class="btn secondary" id="themeBtn" aria-label="Toggle dark mode">☾ Dark mode</button></nav>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">Your next favorite story awaits</div>
+    <h1>Little stories.<br>Big K-drama feelings.</h1>
+    <p>Discover original romance, mystery, fantasy, school-life and feel-good stories inspired by the atmosphere of Korean dramas. Pick a cover and start reading.</p>
+  </div>
+</header>
+<main>
+<section id="library" class="library">
+  <div class="section-head"><div><h2>Storybook Library</h2><div class="muted">30 stories · One chapter each</div></div><span class="muted" id="countLabel">30 books</span></div>
+  <div class="controls">
+    <input id="searchInput" type="search" placeholder="Search title, author, or genre…" aria-label="Search stories">
+    <select id="genreFilter" aria-label="Filter by genre"><option value="all">All genres</option><option>Romance</option><option>Fantasy</option><option>Mystery</option><option>School Life</option><option>Comedy</option><option>Thriller</option><option>Slice of Life</option><option>Drama</option></select>
+    <button class="btn secondary" id="resetBtn">Reset filters</button>
+  </div>
+  <div id="bookGrid" class="grid"></div>
+</section>
+<section id="reader" class="reader" aria-live="polite">
+  <div class="reader-top"><button class="btn secondary" id="backBtn">← Back to library</button><span class="muted" id="readerCount">Story 1 of 30</span></div>
+  <div class="reading-layout">
+    <aside><div id="bigCover" class="big-cover"></div><div class="progress-wrap"><div id="progressBar" class="progress-bar"></div></div><div class="muted" id="progressText">Reading progress: 0%</div></aside>
+    <article class="story-panel">
+      <div id="readerGenre" class="genre"></div><h1 id="readerTitle"></h1><div class="byline" id="readerAuthor"></div>
+      <figure class="story-illustration"><img id="storyImage" alt=""><figcaption id="storyCaption" class="muted"></figcaption></figure>
+      <div class="reader-actions"><button class="btn" id="likeReader">♡ Like this story</button><button class="btn secondary" id="synopsisBtn">Hide synopsis</button></div>
+      <div id="synopsisBox" class="synopsis-box"></div>
+      <h3 id="chapterTitle"></h3><div id="storyText" class="story-text"></div>
+      <div class="reader-actions"><button class="btn secondary" id="prevBtn">← Previous story</button><button class="btn" id="nextBtn">Next story →</button></div>
+    </article>
+  </div>
+</section>
+</main>
+<footer class="footer">Made for a school project · HTML + external CSS + JavaScript<br>Original fictional stories; characters and events are imaginary.</footer>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
